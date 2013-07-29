@@ -88,13 +88,7 @@ describe('level-plan', function() {
     db = levelQuery(db);
 
     db.query.use(pathEngine());
-    db.ensureIndex('*', 'pairs', function (key, value, emit) {
-      if (value && typeof value === 'object' && Object.keys(value).length > 0) {
-        pairs(value).forEach(function (pair) {
-          emit(pair);
-        });
-      }
-    });
+    db.ensureIndex('*', 'pairs', pairs.index);
 
     db.batch(testData(), doQuery);
     function doQuery(err) {
