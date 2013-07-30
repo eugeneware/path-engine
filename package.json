@@ -1,6 +1,6 @@
 {
   "name": "path-engine",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "level-queryengine plugin to query levelup/leveldb using indexes with a basic javascript array path syntax",
   "main": "index.js",
   "scripts": {
