@@ -51,7 +51,7 @@ function query(q) {
   }
 }
 
-function match(q, obj) {
+function match(obj, q) {
   var queryParts = parseQuery(q);
   return fetchProp(obj, queryParts.path) === queryParts.value;
 }
