@@ -5,6 +5,8 @@ Query your levelup/leveldb engine using a javascript property path array syntax
 
 This is a plugin for [level-queryengine](https://github.com/eugeneware/level-queryengine).
 
+[![build status](https://secure.travis-ci.org/eugeneware/path-engine.png)](http://travis-ci.org/eugeneware/path-engine)
+
 # Installation
 
 Install through npm:
