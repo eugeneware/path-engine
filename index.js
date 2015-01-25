@@ -44,7 +44,7 @@ function query(q) {
   var idx = db.indexes[queryParts.prop];
   if (idx && idx.type in db.query.engine.plans) {
     return db.query.engine.plans[idx.type].call(db, queryParts.prop, queryParts);
-  } else if ((idx = db.indexes['*']) && idx.type in db.query.engine.plans) {
+  } else if ((idx == db.indexes['*']) && idx.type in db.query.engine.plans) {
     return db.query.engine.plans[idx.type].call(db, '*', queryParts);
   } else {
     return null;
